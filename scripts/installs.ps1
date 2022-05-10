@@ -60,7 +60,9 @@ if (-not $restart) {
     choco install --no-progress --limit-output vagrant
     choco install --no-progress --limit-output virtualbox
     choco install --no-progress --limit-output docker-desktop
-
+    
+    net localgroup docker-users "mosadex" /ADD 
+    
     Write-Host "try to get access token"
     $content = [DownloadWithRetry]::DoDownloadWithRetry('http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https%3A%2F%2Fvault.azure.net', 5, 10, $null, $null, $true) | ConvertFrom-Json
     $KeyVaultToken = $content.access_token
