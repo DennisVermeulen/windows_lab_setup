@@ -69,14 +69,14 @@ resource "azurerm_virtual_machine_extension" "initvirtualmachine" {
   settings = <<SETTINGS
     {
       "fileUris": [
-        "https://raw.githubusercontent.com/DennisVermeulen/windows_lab_setup/main/scripts/installs.ps1" \"master\"
+        "https://raw.githubusercontent.com/DennisVermeulen/windows_lab_setup/main/scripts/installs.ps1" 
       ]
     }
   SETTINGS
 
   protected_settings = <<PROTECTED_SETTINGS
     {
-      "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File installs.ps1"
+      "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File installs.ps1 -branch \"master\""
     }
   PROTECTED_SETTINGS
 
