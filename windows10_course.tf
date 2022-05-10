@@ -69,7 +69,7 @@ resource "azurerm_virtual_machine_extension" "initvirtualmachine" {
   settings = <<SETTINGS
     {
       "fileUris": [
-        "https://raw.githubusercontent.com/DennisVermeulen/windows_lab_setup/main/scripts/installs.ps1"
+        "https://raw.githubusercontent.com/DennisVermeulen/windows_lab_setup/main/scripts/installs.ps1" \"master\"
       ]
     }
   SETTINGS
