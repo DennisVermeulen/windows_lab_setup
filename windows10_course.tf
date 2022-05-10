@@ -76,7 +76,7 @@ resource "azurerm_virtual_machine_extension" "initvirtualmachine" {
 
   protected_settings = <<PROTECTED_SETTINGS
     {
-      "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File installs.ps1 -branch \"master\" -additionalPreScript \"""\" -additionalPostScript \""""\" -name \""""\" -authToken \""""\" -debugScripts \""""\""
+      "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File installs.ps1 -branch \"main\""
     }
   PROTECTED_SETTINGS
 
