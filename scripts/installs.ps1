@@ -59,6 +59,7 @@ if (-not $restart) {
     choco install --no-progress --limit-output googlechrome
     choco install --no-progress --limit-output vagrant
     choco install --no-progress --limit-output docker-desktop
+    choco install --no-progress --limit-output git
     
     net localgroup docker-users "mosadex" /ADD 
     shutdown /r
