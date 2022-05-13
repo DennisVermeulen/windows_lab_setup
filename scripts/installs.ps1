@@ -60,6 +60,7 @@ if (-not $restart) {
     choco install --no-progress --limit-output vagrant
     choco install --no-progress --limit-output docker-desktop
     choco install --no-progress --limit-output git
+    choco install --no-progress --limit-output putty
     
     net localgroup docker-users "mosadex" /ADD 
     shutdown /r
