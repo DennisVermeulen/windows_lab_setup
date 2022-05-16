@@ -37,6 +37,7 @@
  resource "azurerm_windows_virtual_machine" "virtualmachine" {
    count               = 1  
    name                = "az-mosadex-${count.index}"
+   computer_name       = "mosadex-${count.index}"
    resource_group_name = azurerm_resource_group.rg.name
    location            = azurerm_resource_group.rg.location
    size                = "Standard_D8s_v3"
